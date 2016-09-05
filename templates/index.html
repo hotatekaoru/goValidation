@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Go Validation Test</title>
+	</head>
+	<body>
+		<h3 class="panel-title">Go Validation Test</h3>
+		{{if .errorList}}
+		<label>Error Message</label>
+		{{range .errorList}}
+		<p>{{.}}</p>
+		{{end}}
+		{{end}}
+		<form action="/" method="POST">
+			<p>どれか1つは入力してください。</p>
+			<p>Requiring at least one field.</p>
+			<div>
+				<label for="str">String</label>
+				<input type="text" id="str" placeholder="" name="str" value="{{.form.Str}}" autofocus>
+			</div>
+			<div>
+				<label for="number">Number</label>
+				<input type="text" id="number" placeholder="only 1~10" name="num" value="{{.form.Num}}">
+			</div>
+			<div>
+				<label for="date">Date</label>
+				<input type="text" id="date" placeholder="YYYY/MM/DD" name="date" value="{{.form.Date}}">
+			</div>
+			<div>
+				<input type="submit" class="btn btn-lg btn-success" value="Submit">
+			</div>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Go Validation Test</title>
+	</head>
+	<body>
+		<h3 class="panel-title">Result</h3>
+		{{if .form.Str}}
+		<div>
+			<label>String</label>
+			<label>{{.form.Str}}</label>
+		</div>
+		{{end}}
+		{{if .form.Num}}
+		<div>
+			<label>Number</label>
+			<label>{{.form.Num}}</label>
+		</div>
+		{{end}}
+		{{if .form.Date}}
+		<div>
+			<label>Date</label>
+			<label>{{.form.Date}}</label>
+		</div>
+		{{end}}
+		<div>
+			<a href="/">Back</a>
+		</div>
+	</body>
+</html>
